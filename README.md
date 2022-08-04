@@ -1,4 +1,4 @@
-Moglix - Buyer Internal Application UI
+Mat Componentswith diffrent views in forms elements 
 ======================================
 
-This portal is used by internal buyer team of Moglix to create PO easily and efficiently.
+This is for UI developers for adding mat form components with the diffrent Views.
