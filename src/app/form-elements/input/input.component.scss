@@ -1,0 +1,162 @@
+
+@import '../../../theme.scss';
+::ng-deep{
+    .mat-form-field-type-mat-input{
+        /*for floating label input*/
+        &.mog3_floatmatinput{
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+              border-width: 1px;
+            }
+            .mat-form-field-infix{
+              border-top: none;
+              padding: 13px 0px 10px;
+            }
+            .mat-select-placeholder{
+              font-family: $fontFamily;
+              font-size: 11px;
+            }
+            .mat-input-element{
+                font-size: 12px;
+              }
+            .mat-form-field-wrapper{
+              padding-bottom: 5px;
+            }
+            .mat-form-field-label{
+                font-size: 12px;
+                top: 2.54375em;
+            }
+            &.mat-form-field-should-float{
+                .mat-form-field-label{
+                    top: 2.74375em;
+                }
+            }
+        }
+        /*for outline input*/
+        &.mog3_matinput{
+          &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+          &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+          &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+            border-width: 1px;
+          }
+          .mat-form-field-infix{
+            border-top: none;
+            padding: 13px 0px 10px;
+          }
+          .mat-select-placeholder{
+            font-family: $fontFamily;
+            font-size: 12px;
+          }
+          .mat-input-element{
+            font-size: 12px;
+          }
+          .mat-form-field-wrapper{
+            padding-bottom: 5px;
+          }
+        }
+        // Textarea types
+        &.mog3_labeltextarea{
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+              border-width: 1px;
+            }
+            .mat-form-field-infix{
+              border-top: none;
+              padding: 13px 0px 10px;
+            }
+            .mat-select-placeholder{
+              font-family: $fontFamily;
+              font-size: 12px;
+            }
+            .mat-input-element{
+              font-size: 12px;
+            }
+            .mat-form-field-wrapper{
+              padding-bottom: 5px;
+            }
+        }
+        &.mog3_floatinglabeltextarea{
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-start,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-end,
+            &.mat-form-field-appearance-outline .mat-form-field-outline-thick .mat-form-field-outline-gap{
+              border-width: 1px;
+            }
+            .mat-form-field-infix{
+              border-top: none;
+            //   padding: 13px 0px 10px;
+            }
+            .mat-select-placeholder{
+              font-family: $fontFamily;
+              font-size: 12px;
+            }
+            .mat-input-element{
+              font-size: 12px;
+            }
+            .mat-form-field-wrapper{
+              padding-bottom: 5px;
+            }
+            .mat-form-field-label{
+                font-size: 12px;
+                top: 2.54375em;
+            }
+            &.mat-form-field-should-float{
+                .mat-form-field-label{
+                    top: 2.74375em;
+                }
+            }
+        }
+       
+    }
+    // Checkbox
+    .mog3_checkbox{
+        .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element{
+            background:$bluebg ;
+        }
+        .mat-checkbox-label{
+            font-size: 11px;
+            font-weight: $fontMedium;
+        }
+        .mat-checkbox{
+            &.checkwhite{
+                .mat-checkbox-frame{
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+    //Radio Button
+    .mog3_radiogroup{
+        .mat-radio-button{
+            margin-right: 20px;
+            &.mat-accent{
+                .mat-radio-label-content{
+                    font-size: 12px;
+                    font-weight: $fontRegular;
+                }
+                &.mat-radio-checked .mat-radio-outer-circle{
+                    border-color:$brandcolor;
+                }
+                .mat-radio-inner-circle,
+                .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+                .mat-radio-checked .mat-radio-persistent-ripple,
+                &:active .mat-radio-persistent-ripple{
+                    background: $brandcolor;
+                }
+            }
+            
+        }
+    }
+   
+   
+}
+
+.formfield{
+    label{
+        display: block;
+        font-size: 11px;
+        margin-bottom: 0px;
+    }
+}
+

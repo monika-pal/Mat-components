@@ -1,0 +1,190 @@
+<h3>Normal Tables</h3>
+<section class="mog3_msnsearchtable" tabindex="0">
+    <table mat-table [dataSource]="dataSource">    
+        
+        <ng-container matColumnDef="select" sticky>
+            <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                            [checked]="selection.hasValue() && isAllSelected()"
+                            [indeterminate]="selection.hasValue() && !isAllSelected()"
+                            [aria-label]="checkboxLabel()">
+            </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                            (change)="$event ? selection.toggle(row) : null"
+                            [checked]="selection.isSelected(row)"
+                            [aria-label]="checkboxLabel(row)">
+            </mat-checkbox>
+            </td>      
+        </ng-container>               
+      
+      <ng-container matColumnDef="sano">
+        <th mat-header-cell *matHeaderCellDef>SA Number</th>
+        <td mat-cell *matCellDef="let element"> 
+            <span class="link">{{element?.sano}}</span>
+        </td>
+      </ng-container>    
+      
+      <ng-container matColumnDef="plantname">
+        <th mat-header-cell *matHeaderCellDef>Plant name</th>
+        <td mat-cell *matCellDef="let element"> 
+           {{element?.plantname}}
+         </td>
+      </ng-container>
+  
+     
+      <ng-container matColumnDef="plantid">
+        <th mat-header-cell *matHeaderCellDef>Plant ID</th>
+        <td mat-cell *matCellDef="let element">{{element?.plantid}}</td>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="creationdate">
+        <th mat-header-cell *matHeaderCellDef><span>Creation Date</span> <i class="ri-calendar-2-fill"></i></th>
+        <td mat-cell *matCellDef="let element"> 
+          {{element?.crdate}}<span class="time">{{element?.crtime}}</span>
+        </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="validtill">
+        <th mat-header-cell *matHeaderCellDef>Valid Till</th>
+        <td mat-cell *matCellDef="let element"> {{element?.validtill}}
+        </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="productcount">
+        <th mat-header-cell *matHeaderCellDef> Product Count</th>
+        <td mat-cell *matCellDef="let element"> 
+         {{element?.prodcount}}
+        </td>
+      </ng-container>
+       
+       <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element"> 
+        <span class="link">CREATE SCHEDULE</span>
+        </td>
+      </ng-container>
+       
+       
+    <ng-container matColumnDef="more" stickyEnd>
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-icon-button [matMenuTriggerFor]="moreoptions">
+          <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #moreoptions="matMenu" class="moreoptionsmenu">            
+            <button mat-menu-item>History</button>
+            <button mat-menu-item>Invoice</button>
+            <button mat-menu-item>Update ETA</button>
+            <button mat-menu-item>Add/View Comment</button>     
+            <button mat-menu-item>Inventory Info</button> 
+            <button mat-menu-item>Customer Address</button> 
+            <button mat-menu-item>Fulfillment Warehouse</button>   
+        </mat-menu>
+      </td>
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+  </section>
+
+<br><br><br><br><br><br>
+<div style="margin-bottom: 40px;"></div>
+  <h3>Sticky table</h3>
+<section class="mog3_msnsearchtable_sticky" tabindex="0">
+    <table mat-table [dataSource]="dataSource">    
+        
+        <ng-container matColumnDef="select" sticky>
+            <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                            [checked]="selection.hasValue() && isAllSelected()"
+                            [indeterminate]="selection.hasValue() && !isAllSelected()"
+                            [aria-label]="checkboxLabel()">
+            </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                            (change)="$event ? selection.toggle(row) : null"
+                            [checked]="selection.isSelected(row)"
+                            [aria-label]="checkboxLabel(row)">
+            </mat-checkbox>
+            </td>      
+        </ng-container>               
+      
+      <ng-container matColumnDef="sano">
+        <th mat-header-cell *matHeaderCellDef>SA Number</th>
+        <td mat-cell *matCellDef="let element"> 
+            <span class="link">{{element?.sano}}</span>
+        </td>
+      </ng-container>    
+      
+      <ng-container matColumnDef="plantname">
+        <th mat-header-cell *matHeaderCellDef>Plant name</th>
+        <td mat-cell *matCellDef="let element"> 
+           {{element?.plantname}}
+         </td>
+      </ng-container>
+  
+     
+      <ng-container matColumnDef="plantid">
+        <th mat-header-cell *matHeaderCellDef>Plant ID</th>
+        <td mat-cell *matCellDef="let element">{{element?.plantid}}</td>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="creationdate">
+        <th mat-header-cell *matHeaderCellDef><span>Creation Date</span> <i class="ri-calendar-2-fill"></i></th>
+        <td mat-cell *matCellDef="let element"> 
+          {{element?.crdate}}<span class="time">{{element?.crtime}}</span>
+        </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="validtill">
+        <th mat-header-cell *matHeaderCellDef>Valid Till</th>
+        <td mat-cell *matCellDef="let element"> {{element?.validtill}}
+        </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="productcount">
+        <th mat-header-cell *matHeaderCellDef> Product Count</th>
+        <td mat-cell *matCellDef="let element"> 
+         {{element?.prodcount}}
+        </td>
+      </ng-container>
+       
+       <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let element"> 
+        <span class="link">CREATE SCHEDULE</span>
+        </td>
+      </ng-container>
+       
+       
+    <ng-container matColumnDef="more" stickyEnd>
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-icon-button [matMenuTriggerFor]="moreoptions">
+          <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #moreoptions="matMenu" class="moreoptionsmenu">            
+            <button mat-menu-item>History</button>
+            <button mat-menu-item>Invoice</button>
+            <button mat-menu-item>Update ETA</button>
+            <button mat-menu-item>Add/View Comment</button>     
+            <button mat-menu-item>Inventory Info</button> 
+            <button mat-menu-item>Customer Address</button> 
+            <button mat-menu-item>Fulfillment Warehouse</button>   
+        </mat-menu>
+      </td>
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+  </section>
+

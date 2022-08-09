@@ -1,0 +1,23 @@
+::ng-deep{
+    .rightsidedialog{
+        position: absolute !important;
+        display: block;
+        top:0;
+    }
+    .cdk-overlay-pane{
+        transform: translateX(0);
+        // animation: slideDown 0.5s forwards 0s ease-in;
+        }
+        .cdk-overlay-container > * {
+        transition: none;
+        }
+    
+}
+// @Keyframes slideDown{
+//     0%{ transform: translateY(0%);}
+//     100%{
+//     transform: translateY(20%);
+//     }
+// }
+    
+  

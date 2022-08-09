@@ -1,0 +1,158 @@
+@import '../../../theme.scss';
+.mog3_msnsearchtable{
+    margin-top: 15px;
+    border-radius: 4px;
+    height: 400px;
+    width: 100%;
+    max-width: 100%;
+    // overflow: auto;
+
+::ng-deep{
+    .mat-table{
+        // min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+       
+        th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+            border-bottom: none;
+        }
+        thead{
+            height: 38px !important;
+            border-radius: 4px;
+            .mat-header-cell{                
+                background:#F2F2F2;
+                padding: 0 10px;
+                font-size: 11px;
+                color: $secondaryColor;
+                &.cdk-column-plantname{
+                    width: 15%;
+                    max-width: 15%;
+                }
+                &.cdk-column-creationdate{
+                    i{
+                        font-size: 18px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    span{
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        tbody{
+            .mat-cell{
+                padding:10px;
+                font-size: 11px;
+                color: $secondaryColor;  
+                &.cdk-column-sano{
+                    span{
+                        font-weight: 600;
+                    }
+                }    
+                &.cdk-column-action{
+                    span{
+                        font-weight: 500;
+                    }
+                }  
+                &.cdk-column-more{
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                &.cdk-column-creationdate{
+                    font-weight: 600;
+                    span{
+                        font-weight: $fontRegular;
+                        display: block;
+                    }
+                }
+               
+            }
+            
+        }
+    }
+}    
+   
+}
+
+
+
+.mog3_msnsearchtable_sticky{
+    margin-top: 15px;
+    border-radius: 4px;
+    height: 400px;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+
+::ng-deep{
+    .mat-table{
+        // min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+       
+        th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+            border-bottom: none;
+        }
+        thead{
+            height: 38px !important;
+            border-radius: 4px;
+            .mat-header-cell{                
+                background:#F2F2F2;
+                padding: 0 10px;
+                font-size: 11px;
+                color: $secondaryColor;
+                &.cdk-column-plantname{
+                    width: 15%;
+                    max-width: 15%;
+                }
+                &.cdk-column-creationdate{
+                    i{
+                        font-size: 18px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    span{
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        tbody{
+            .mat-cell{
+                padding:10px;
+                font-size: 11px;
+                color: $secondaryColor;  
+                &.cdk-column-sano{
+                    span{
+                        font-weight: 600;
+                    }
+                }    
+                &.cdk-column-action{
+                    span{
+                        font-weight: 500;
+                    }
+                }  
+                &.cdk-column-more{
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                &.cdk-column-creationdate{
+                    font-weight: 600;
+                    span{
+                        font-weight: $fontRegular;
+                        display: block;
+                    }
+                }
+               
+            }
+            
+        }
+    }
+}    
+   
+}

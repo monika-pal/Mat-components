@@ -1,0 +1,63 @@
+@import '../../../theme.scss';
+.mog3_flat_btn{
+    height: 40px;
+    line-height: 40px;
+    border-radius: $commonRadius;
+    padding: 0 20px;
+    font-size: 12px;
+    border: none;
+    &:disabled{
+        background: #A2A2A2;
+        color: #fff;
+    }
+    i{
+        margin-right: 5px;
+        font-size: 17px
+    }
+}
+.mog3_primary_flat_btn{
+    @extend .mog3_flat_btn;
+    background: $brandcolor;
+    color: #fff;
+    &:disabled{
+        background: #A2A2A2;
+        color: #fff;
+    }
+}
+.mog3_secondary_flat_btn{
+    @extend .mog3_flat_btn;
+    background: $secondaryBrandBgColor;
+    color: $brandcolor;
+    &:disabled{
+        background: #A2A2A2;
+        color: #fff;
+    }
+}
+.mog3_transparent_btn{
+    @extend .mog3_flat_btn;
+    background-color: transparent;
+    border: none;
+}
+.mog3_rejectbtn{
+    @extend .mog3_flat_btn;
+    background: #b4b4b4;
+    border: none;
+    color: #fff;
+}
+.mog3_backbtn{
+    padding: 0;
+    vertical-align: middle;
+    i{
+        font-size: 18px;
+    }
+}
+.mog3_iconbtn{
+    vertical-align: middle;
+    line-height: 39px;
+    i{
+        font-size: 18px;
+    }
+    &.primary{
+        color: $brandcolor;
+    }
+}

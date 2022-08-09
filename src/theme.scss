@@ -1,0 +1,166 @@
+@use '@angular/material' as mat;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+// mat.$green-palette : #78be20;
+// mat.$blue-palette : #22b4ff;
+
+
+// @include mat.core();
+// $buyer-ui-primary: mat.define-palette(mat.$blue-palette);
+// $buyer-ui-accent: mat.define-palette(mat.$green-palette);
+// $buyer-ui-theme: mat.define-light-theme($buyer-ui-primary, $buyer-ui-accent);
+// @include mat.all-component-themes($buyer-ui-theme);
+
+
+//Variables for colors and font
+$brandcolor:#D9232D;
+$secondaryBrandBgColor:#FFEBEB;
+$headingColor:#3a3a3a;
+$secondaryColor:#363636;
+$lightGrayColor:#797979;
+$borderColor:#CFD2E2;
+$borderColorlight:#ECECEC;
+$errorRed:#BC2832;
+$disabledinput:#F5F5F5;
+$disabledinputborder:#C6C6C6;
+$success:#68B820;
+$tableHeadBg:#EAEAEA;
+$tagBluebg:#C9DCFF;
+$bluebg: #0089FF;
+$lightbluebg:#EAF4FF;
+$tableheadBluebg:#005EB8;
+$fontFamily: 'Poppins', sans-serif;
+$fontRegular:400;
+$fontMedium:500;
+$fontSemibold:600;
+$fontBold:700;
+$commonRadius:4px;
+
+
+
+//common classes 
+.mog3_body{
+    background: #F2F2F2;
+    height: 100%;
+    min-height: 100vh;
+    font-family: $fontFamily;
+    font-weight: $fontRegular;
+}
+
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+.align_top{
+    align-items: flex-start;
+}
+.align_bottom{
+    align-items: flex-end;
+}
+.justify_sb{
+ justify-content: space-between;
+}
+.justify_fe{
+    justify-content: flex-end;
+}
+.link{
+    color: #0089FF;
+    cursor: pointer;
+}
+.h1_heading{
+    font-size: 28px;
+    font-weight: $fontMedium;
+}
+.h2_heading{
+    font-size: 16px;
+    font-weight: $fontBold;
+}
+.h3_heading{
+    font-size: 14px;
+    font-weight: $fontBold;
+}
+.h4_heading{
+    font-size: 12px;
+    font-weight: $fontBold;
+}
+h1,h2,h3{
+    color: $headingColor;
+}
+.noborder{
+    border: none;
+}
+.mog3-matselect{
+    ::ng-deep{
+        .mat-option{
+            font-family: $fontFamily;
+        }
+    }
+}
+
+::ng-deep {
+    .mat-radio-button{
+        &.mat-accent{
+            .mat-radio-label-content{
+                font-size: 12px;
+                font-weight: $fontRegular;
+            }
+            &.mat-radio-checked .mat-radio-outer-circle{
+                border-color:$brandcolor;
+            }
+            .mat-radio-inner-circle,
+            .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+            .mat-radio-checked .mat-radio-persistent-ripple,
+            &:active .mat-radio-persistent-ripple{
+                background: $brandcolor;
+            }
+        }
+        
+    }
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element{
+        background:$bluebg ;
+    }
+    .mat-checkbox-label{
+        font-size: 11px;
+        font-weight: $fontMedium;
+    }
+    .mat-checkbox{
+        &.checkwhite{
+            .mat-checkbox-frame{
+                border-color: #fff;
+            }
+        }
+    }
+    .mog3_slidetoggle{
+        .mat-slide-toggle-bar{
+            width: 29px;
+        }
+        .mat-slide-toggle-thumb-container {
+            width: 10px;
+            height: 10px;
+            top: 2px;
+            left: 2px;
+        }
+        .mat-slide-toggle-thumb {
+            height: 10px;
+            width: 10px;
+        }
+        &.mat-checked {
+            .mat-slide-toggle-bar {
+                background-color:$success;
+            }
+            .mat-slide-toggle-thumb {
+                background-color: #fff;
+            }
+            .mat-ripple-element {
+                background-color: $success;
+            }
+        }
+        .mat-slide-toggle-ripple {
+            top: calc(50% - 10px);
+            left: calc(50% - 10px);
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+}
